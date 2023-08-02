@@ -5,4 +5,4 @@ and grid to make it responsive .
 - I used vanilla javascript for the 
 functionality .
 - I used Swiper.js library in testimonial
-- section to make the slides
+ section to make the slides
