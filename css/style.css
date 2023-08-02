@@ -107,24 +107,22 @@ header{
 }
 /* header-section-end */
 /* main-section-start */
-main{
+#home{
     height: 100vh;
+    padding: 0 5%;
 }
 .main-container{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
+    height: 100%;
+    width:100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 5%;
-    width:100%;
+    align-items: center;
     font-size: 110%;
     
 }
 .main-info{
     display: flex;
-    justify-content: space-between;
-    
+    gap: 3rem;
 }
 .main-icons{
     display:flex;
@@ -134,7 +132,6 @@ main{
 }
 .main-icons a{
     font-size: 0.9rem;
-    background-color: var(--color-lightdark);
     height: 2rem;
     width:2rem;
     border-radius: 50%;
@@ -148,11 +145,11 @@ main{
     color:white;
     background-color: var(--color-primary);
 }
-.main-info-details{
-    margin-left: 4rem;
-}
 .main-info-details h3{
     padding: 35px 0;
+}
+.main-info-details p{
+    width: 95%;
 }
 .main-info-details button{
     padding:10px 30px;
@@ -321,9 +318,8 @@ main{
     gap: 5px;
 }
 .skill-progress progress{
-    color: var(--color-primary);
-    background-color: var(--color-primary);
     width: 94%;
+   
 }
 
 /* skills-section-end */
@@ -522,17 +518,14 @@ footer{
 }
 @media(max-width:790px){
     /*  main-section-start */
-    .main-container{
-        flex-direction: column-reverse;
-    }
     .outer-circ{
         height: 200px;
         width:200px;
     }
     .main-img .img-container img{
        
-       width:10rem;
-       height:10rem;
+       width: 10rem;
+       height: 10rem;
       
     }
     .main-info{
@@ -541,9 +534,7 @@ footer{
     .main-info-details h1 , .main-info-details h3 , .main-info-details h3{
        font-size:110%;
     }
-    .main-info-details p{
-       width:90% 
-    }
+    
     /*  main-section-end */
     /*  about-section-start */
     .about-container{
@@ -631,6 +622,14 @@ footer{
         display: none;
     }
     /* header-section-end */
+    /*main-section-start */
+    .main-container{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        
+    }
+    
+    /* main-section-end */
     /* skill-section-start */
     .skills-container{
         width:70%;
@@ -651,6 +650,11 @@ footer{
 }
 
 @media(max-width: 425px){
+    /* main-section-start */
+    .main-container .main-img{
+        margin-top: 2rem;
+    }
+    /* main-section-end */
     /* testimonial-section-start */
     .testi-porto img{
         width:40px;
@@ -661,23 +665,11 @@ footer{
     }
 }
 @media(max-width:385px){
-    /* main-section-start */
-    .main-info{
-        margin-top:120px;
-    }
-    .main-img{
-        margin-top: 40px;
-    }
-    .outer-circ{
-        display: none;
-    }
+    /* main-section-start */    
     .main-img .img-container img{
-       
-       width: 8rem;
-       height:8rem;
-      
+        width: 9rem;
+        height:9rem;
     }
-
     .main-info-details h1 , .main-info-details h3 , .main-info-details h3{
        font-size:100%;
     }
@@ -696,7 +688,6 @@ footer{
         width:90%;
         font-size:0.8rem
     }
-    
     /* skills-section-end */
     /* footer-section-start */
     footer p{
@@ -707,32 +698,12 @@ footer{
 
 @media(max-width:320px){
     /* main-section-start */
-    .main-info{
-        margin-top:90px;
-        justify-content: unset;
-    }
-    .main-img{
-        margin-top: 60px;
-    }
-    .main-img .img-container img{
-       
-       width: 6rem;
-       height:6rem; 
-    }
-    .main-icons{
-        position: absolute;
-        top: 0px;
-        left: 5%;
-    }
-    .main-info-details{
-        margin-left: 5%;
-        margin-top: 20px;
-    }
     .main-info-details h1 , .main-info-details h3 , .main-info-details h3{
        font-size: 80%;
     }
-    .main-info-details p{
-        width: 100%;
+    .main-info-details button{
+        padding:10px 10px;
+        font-size: 0.9rem;
     }
     /* main-section-end */
     /*skill-section-start */
@@ -753,6 +724,14 @@ footer{
     }
 }
 @media(max-width: 250px){
+    /*main-section-start */
+    .main-container{
+        justify-content: center;
+    }
+    .outer-circ{
+        display: none;
+    }
+    /*main-section-end */
     /*skill-section-start */
     .skill-parent-item , .skill-child-container{
         font-size: 60%;
@@ -781,3 +760,14 @@ footer{
     }
     /* footer-section-end */
 }          
+
+/* dealing with specific heights in main-section */
+@media(max-height: 786px){
+    /* main-section */
+    #home{
+        height: auto;
+    }
+    .main-container{
+        margin-top: 7rem
+    }
+}
