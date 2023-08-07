@@ -43,11 +43,27 @@ navItems.forEach( item =>{
         
 })
 
+/*   
+     main-section
+     working on animation on auto-type
+*/
+const text = document.querySelector(".text2");
+const autoType = ()=>{
+        setTimeout(() => {
+                text.textContent = "Front End Developer"
+        }, 0);
+        setTimeout(() => {
+                text.textContent = "Mechanical Engineer"
+        }, 3000);
+}
+autoType();
+setInterval( autoType , 6000);
 
 /*   
      about-section
      working on show-more and show-less
 */
+
 showMore = document.querySelector(".show-more-anchor");
 readMoreContent = document.querySelector(".read-more-content"); 
 
@@ -93,3 +109,18 @@ const swiper = new Swiper('.swiper', {
         }
        
 })      
+
+
+//on-scroll animation
+const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                        entry.target.classList.add("show");
+                }else{
+                        entry.target.classList.remove("show");
+   
+                }
+        })
+})
+const hiddenEle = document.querySelectorAll(".hidden");
+hiddenEle.forEach((ele)=> observer.observe(ele));
