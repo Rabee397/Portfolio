@@ -118,7 +118,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 110%;
+    font-size: 100%;
     overflow-x: hidden;
 }
 .main-info{
@@ -567,25 +567,25 @@ footer{
     }
     /*portfolio-section-end */
 }
+@media(max-width: 850px){
+    /* main-section-start */
+    .main-container{
+        font-size: 80%;
+    }
+}
 @media(max-width:790px){
     /*  main-section-start */
     .outer-circ{
         height: 200px;
         width:200px;
     }
-    .main-img .img-container img{
-       
+    .main-img .img-container img{       
        width: 9rem;
        height: 9rem;
-      
     }
     .main-info{
         margin-top:30px;
     }
-    .main-info-details h1 , .main-info-details h3 , .main-info-details h3{
-       font-size:110%;
-    }
-    
     /*  main-section-end */
     /*  about-section-start */
     .about-container{
@@ -607,16 +607,13 @@ footer{
     
     /* services-section-start */
     .services-container {
-        grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
-        
+        grid-template-columns: repeat(auto-fit, minmax(100%,1fr));       
     }
     /* services-section-end */
     /* testimonial-section-start */
     .testimony .testi-main-container{
         width: 100%;
-
-    }   
-    
+    }      
 }
 @media(max-width:660px){
     /* header-section-start */
@@ -702,6 +699,12 @@ footer{
 
 @media(max-width: 425px){
     /* main-section-start */
+    .main-info{
+        gap: 1rem;
+    }
+    .main-info-details h1{
+        font-size: 1.2rem;
+    }
     .main-container .main-img {
         margin-bottom: 6rem;
         margin-top: 7rem;
@@ -717,13 +720,13 @@ footer{
     }
 }
 @media(max-width:385px){
-    /* main-section-start */    
+    /* main-section-start  */ 
+    .main-info-details h1 {
+        font-size: 1rem;
+     }   
     .main-img .img-container img{
-        width: 9rem;
-        height:9rem;
-    }
-    .main-info-details h1 , .main-info-details h3 , .main-info-details h3{
-       font-size:100%;
+        width:  9rem;
+        height: 9rem;
     }
     .outer-circ{
         display: none;
@@ -753,7 +756,10 @@ footer{
 
 @media(max-width:320px){
     /* main-section-start */
-    .main-info-details h1 , .main-info-details h3 , .main-info-details h3{
+    .main-info-details h1 {
+        font-size: 0.9rem;
+     }
+    .main-info-details h3 , .main-info-details p{
        font-size: 80%;
     }
     .main-info-details button{
@@ -783,6 +789,9 @@ footer{
     .main-container{
         justify-content: center;
     }
+    .main-info-details h1 {
+        font-size: 0.8rem;
+     }
     .outer-circ{
         display: none;
     }
